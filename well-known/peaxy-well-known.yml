@@ -1,0 +1,46 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of /.well-known/* on every host named in apis.yml
+note: >-
+  Every /.well-known/ path probed on peaxy.net returned 404, and the soft-404 control
+  (/this-path-should-not-exist-xyz123) also returned 404 with a comparable body size, so these are
+  genuine negatives rather than a catch-all answering 200 for everything. No WellKnown or SecurityTxt
+  pointer is emitted in apis.yml because nothing was served. peaxy.com is a separate case: it no longer
+  belongs to an active Peaxy property and 302s to market.godaddysites.com (a GoDaddy domain-parking
+  page), which answers 200 for every path including /.well-known/agent-card.json — a universal
+  catch-all, not a served document, and therefore recorded as a miss.
+hit_count: 0
+hosts:
+- host: https://peaxy.net
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /this-path-should-not-exist-xyz123
+    status: 404
+    bytes: 83385
+- host: https://peaxy.com
+  note: >-
+    Parked. All requests 302 to https://market.godaddysites.com/ and return 200 regardless of path;
+    treated as a catch-all, so no document is recorded.
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    catch_all: true
+    file: null
+  - path: /.well-known/agent.json
+    status: 200
+    catch_all: true
+    file: null

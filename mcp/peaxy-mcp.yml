@@ -1,0 +1,28 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  peaxy.net sitemap + product pages, npm registry search, GitHub org search; probed
+  https://peaxy.net/mcp (404) and DNS for mcp.peaxy.net (NXDOMAIN)
+status: none
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+server: null
+tools: []
+note: >-
+  Peaxy publishes no hosted/remote MCP server and no stdio MCP package. No candidate tool list could
+  be derived either, because Peaxy publishes no OpenAPI, GraphQL SDL or other machine-readable
+  contract to derive one from. Deliberately no MCPServer pointer in apis.yml — asserting one would
+  claim an agent surface that does not exist.
+probes:
+- url: https://peaxy.net/mcp
+  status: 404
+- url: https://mcp.peaxy.net
+  status: NXDOMAIN
+- url: https://registry.npmjs.org/-/v1/search?text=peaxy
+  status: 200
+  result: 0 packages

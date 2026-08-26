@@ -1,0 +1,43 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://peaxy.net/ sitemap (wp-sitemap.xml, 57 pages / 113 posts / 2 brochures), plus probes of
+  /status (404), status.peaxy.net (NXDOMAIN), /pricing (404) and /docs (404)
+versioning:
+  scheme: null
+  policy_published: false
+  note: No API versioning scheme is published, because no API reference is published.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  rfc8594: unknown
+status_page:
+  published: false
+  probes:
+  - url: https://peaxy.net/status
+    status: 404
+  - url: https://status.peaxy.net
+    status: NXDOMAIN
+sla:
+  published: false
+changelog:
+  published: false
+  note: >-
+    peaxy.net/blog/ and peaxy.net/insights/ carry dated company and technical posts, but there is no
+    product or API changelog. No ChangeLog pointer is emitted.
+company_lifecycle:
+  founded: 2012
+  headquarters: San Jose, California, USA
+  offices:
+  - Stockholm, Sweden
+  - Cagliari, Italy
+  status: active
+  evidence: https://peaxy.net/about/
+  domain_note: >-
+    The company's historical domain peaxy.com is no longer theirs to serve — it 302s to
+    market.godaddysites.com, a GoDaddy parking page. The live property is peaxy.net, whose WordPress
+    install reports content modified as recently as 2026-08-14. Any catalog record still pointing at
+    peaxy.com is stale.
+note: >-
+  Deliberately no StatusPage and no Deprecation pointer in apis.yml — both were probed and neither is
+  published.

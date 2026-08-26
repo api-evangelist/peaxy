@@ -1,0 +1,32 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org, rubygems.org, crates.io, GitHub org github.com/peaxy and
+  github.com/peaxy-federal, and every page in peaxy.net's Yoast sitemap
+package_count: 0
+packages: []
+registries_probed:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=peaxy
+  result: 0 matches
+- registry: pypi
+  query: https://pypi.org/pypi/peaxy/json
+  result: 404
+- registry: rubygems
+  query: https://rubygems.org/api/v1/gems/peaxy.json
+  result: 404
+- registry: crates.io
+  query: https://crates.io/api/v1/crates/peaxy
+  result: 403 (crates.io rejects unauthenticated UA); no peaxy crate surfaced by search either
+- registry: github
+  query: https://github.com/peaxy
+  result: >-
+    org exists (created 2011-08-25, US) with 1 public repo — peaxy/samba, a 2017 mirror-fork of the
+    Samba project, not a client library. github.com/peaxy-federal has 0 public repos.
+note: >-
+  No first-party client library, SDK or CLI is published to any public registry. Peaxy's product
+  pages state "We provide a range of open API's that allow for the most flexible implementations that
+  grow as you do" (peaxy.net/build/, /innovate/, /lims/, /battery-analytics/), but neither the API nor
+  any client for it is published publicly — integration runs through a demo request and a customer
+  engagement. version/published are omitted because there is no package to read them from, not
+  because they were not checked.

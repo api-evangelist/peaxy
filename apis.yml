@@ -1,17 +1,38 @@
 aid: peaxy
 name: Peaxy
-description: 'Peaxy is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Peaxy, Inc. is a San Jose, California industrial AI and digital-twin software company founded in
+  2012, with offices in Stockholm, Sweden and Cagliari, Italy. Its Peaxy Lifecycle Intelligence (PLI)
+  platform threads design, test, manufacturing, field and service data for mission-critical physical
+  assets into a single cloud-based source of truth, then applies machine learning to predict failures,
+  extend asset life and support warranty, quality and readiness decisions. Product lines cover battery
+  and energy-storage analytics (R&D through manufacturing, deployment and second life), defense
+  readiness and predictive maintenance for the U.S. Department of Defense and Department of Energy,
+  critical infrastructure and airport/circuit-level AI, a battery LIMS, and EcoGrid for renewable
+  energy communities. Peaxy markets "a range of open APIs" for platform integration, but publishes no
+  public developer portal, API reference or machine-readable contract — access runs through a demo
+  request and a customer engagement. The platform is SOC 2 Type II certified and aligned to NIST
+  800-171.
 url: https://raw.githubusercontent.com/api-evangelist/peaxy/refs/heads/main/apis.yml
+image: https://peaxy.net/wp-content/uploads/2021/10/logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Industrial AI
+- Digital Twin
+- Battery Analytics
+- Energy Storage
+- Predictive Maintenance
+- Asset Management
+- Manufacturing
+- Defense
+- Analytics
+- Data Management
+- Machine Learning
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,63 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/peaxy-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://peaxy.net/
+- type: Blog
+  url: https://peaxy.net/blog/
+- type: BlogRSS
+  url: https://peaxy.net/feed/
+- type: Support
+  url: https://peaxy.net/request-live-demo/
+- type: SignUp
+  url: https://peaxy.net/request-live-demo/
+- type: TermsOfService
+  url: https://peaxy.net/general-terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://peaxy.net/privacy-policy/
+- type: Compliance
+  url: https://peaxy.net/soc2certification/
+- type: GitHubOrganization
+  url: https://github.com/peaxy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/peaxy-inc-/
+- type: Conformance
+  url: conformance/peaxy-conformance.yml
+- type: Lifecycle
+  url: lifecycle/peaxy-lifecycle.yml
+- type: Packages
+  url: packages/peaxy-packages.yml
+- type: Plans
+  url: plans/peaxy-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/peaxy-rate-limits.yml
+- type: LLMsTxt
+  url: llms/peaxy-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Peaxy markets "a range of open API's" on four product pages but publishes no developer portal, API
+    reference or machine-readable contract anywhere — every route to the platform is the
+    /request-live-demo/ form, and the only host that answers is the WordPress marketing site.
+  evidence:
+  - url: https://peaxy.net/build/
+    status: 200
+  - url: https://peaxy.net/developers
+    status: 404
+  - url: https://peaxy.net/api-reference
+    status: 404
+  - url: https://peaxy.net/openapi.json
+    status: 404
+  - url: https://peaxy.net/.well-known/agent-card.json
+    status: 404
+  - url: https://peaxy.com/
+    status: 302
+  checked: '2026-08-26'

@@ -64,5 +64,5 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Peaxy is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Peaxy, Inc. is a San Jose, California industrial AI and digital-twin software company founded in 2012, with offices in Stockholm, Sweden and Cagliari, Italy. Its Peaxy Lifecycle Intelligence (PLI) platform threads design, test, manufacturing, field and service data for mission-critical physical assets into a single cloud-based source of truth, then applies machine learning to predict failures, extend asset life and support warranty, quality and readiness decisions. Peaxy markets "a range of open APIs" but publishes no public developer portal, API reference or machine-readable contract; access runs through a demo request.
+- https://peaxy.net/

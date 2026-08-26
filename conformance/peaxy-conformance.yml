@@ -1,0 +1,68 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://peaxy.net/soc2certification/, https://peaxy.net/okta_configuration_guide/,
+  https://www.okta.com/integrations/peaxy-lifecycle-intelligence/, https://peaxy.net/about/
+note: >-
+  Peaxy publishes no machine-readable API contract, so nothing here is derived from a spec. Every
+  entry below is a claim Peaxy makes on its own public pages, with the page that carries it as
+  evidence. A standard Peaxy does not claim is recorded conforms:false with no evidence rather than
+  guessed at.
+standards:
+- id: soc2-type-ii
+  conforms: true
+  evidence: >-
+    "Peaxy, a leader in digital twin and analytics software, has achieved SOC 2 Type II
+    certification" — audited by Johanson Group; page updated July 2026.
+  source: https://peaxy.net/soc2certification/
+- id: nist-800-171
+  conforms: partial
+  evidence: >-
+    Peaxy states alignment with the NIST 800-171 framework in support of U.S. Department of Defense
+    and Department of Energy contractors. Stated as alignment, not as an assessed/certified control
+    set, so recorded as partial.
+  source: https://peaxy.net/soc2certification/
+- id: oidc
+  conforms: true
+  evidence: >-
+    Peaxy Lifecycle Intelligence integrates with Okta over OpenID Connect for SSO. Peaxy's own
+    configuration guide instructs customers to supply an Okta issuer URL
+    (https://<tenant>.okta.com/oauth2/default), a client ID and a client secret, and documents
+    SP-initiated SSO, IdP-initiated SSO and just-in-time provisioning. This is platform sign-on for
+    the PLI application; it is NOT documented API authentication, and no Authentication pointer is
+    emitted on that basis.
+  source: https://peaxy.net/okta_configuration_guide/
+- id: itar
+  conforms: claimed
+  evidence: >-
+    "SOC 2 Type II  IL-5  GovCloud  ITAR  ATO  NIST 800-171" appears as a compliance tagline on the
+    certification page; ITAR/IL-5/ATO are asserted but not detailed anywhere public, so recorded as
+    claimed rather than conforms:true.
+  source: https://peaxy.net/soc2certification/
+- id: oauth2
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+- id: json-api
+  conforms: false
+- id: odata
+  conforms: false
+- id: scim
+  conforms: false
+  evidence: >-
+    Okta's catalog listing for Peaxy Lifecycle Intelligence renders Okta's generic capability list
+    (SAML/OIDC/SCIM/etc.); Peaxy's own configuration guide documents OIDC only and names no SCIM base
+    URL, so no SCIM conformance is asserted.
+  source: https://www.okta.com/integrations/peaxy-lifecycle-intelligence/
+domain_standards:
+- market: battery lifecycle / energy storage analytics
+  candidates_probed:
+  - battery-passport
+  - mesa-2030
+  - ieee-1547
+  - sunspec-modbus
+  found: false
+  note: >-
+    Peaxy blogs about the EU Battery Passport (peaxy.net/the-battery-passport-and-its-global-relevance/)
+    as market context, but declares no domain data standard in any contract, because it publishes no
+    contract. Reward-only dimension: recorded as not-found, never invented.

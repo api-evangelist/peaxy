@@ -1,0 +1,19 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://peaxy.net/ full Yoast sitemap walk (wp-sitemap.xml -> page-sitemap.xml, 57 pages) plus a
+  direct probe of https://peaxy.net/pricing (404)
+plan_count: 0
+plans: []
+pricing_model: contact-sales
+note: >-
+  Peaxy publishes no pricing page and no plan tiers. There is no /pricing route (404) and no pricing
+  entry anywhere in the site's own sitemap. Every commercial call to action on the site is a form —
+  /request-live-demo/, /online-demo/, /request-free-demo/, /brochure/, /download-case-study/ — so
+  cost is established in a sales conversation. This is an enterprise contact-us motion, recorded as a
+  measured zero rather than omitted.
+probes:
+- url: https://peaxy.net/pricing
+  status: 404
+- url: https://peaxy.net/request-live-demo/
+  status: 200

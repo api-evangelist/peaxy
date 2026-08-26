@@ -1,0 +1,20 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://peaxy.net/ sitemap walk plus contract-discovery probes for any API reference
+  (/docs, /developers, /api-reference, /openapi.json — all 404)
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are published. Peaxy markets "a range of open API's" on /build/, /innovate/, /lims/
+  and /battery-analytics/, but publishes no API reference, so there is no documented quota, window,
+  burst, 429 behaviour or RateLimit-* response header to record. An honest zero: checked, nothing
+  published.
+probes:
+- url: https://peaxy.net/api-reference
+  status: 404
+- url: https://peaxy.net/developers
+  status: 404
+- url: https://peaxy.net/docs
+  status: 404
